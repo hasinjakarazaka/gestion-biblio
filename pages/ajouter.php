@@ -22,7 +22,7 @@ if(isset($_POST['submit'])){
 
     $inserUser = $db->prepare('INSERT INTO membres(CIN,nom,mdp,statut,email,cotisation) VALUES( ?, ?, ?, ?, ?, ?)');
     $inserUser->execute(array( $CIN, $name, $mdp, $statut, $email, $cotisation));
-    header('location: adminIndex.php');
+    header('location: adminIndex.php');  
 
 }
 else{

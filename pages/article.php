@@ -1,5 +1,5 @@
 <?php
-include 'ddb.php';
+require('../inc/ddb.php');
 
 
 
@@ -11,7 +11,7 @@ include 'ddb.php';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>livre</title>
     <style>
         table td {
             border: solid;
@@ -31,6 +31,8 @@ include 'ddb.php';
                     <td> <img src="export.php?id_livre=<?=$user['id_livre']?>" alt="livre"> </td>
                     <td><?= $user['titre']; ?></td>
                     <td><?= $user ['auteur'] ;?></td>
+                    <td><?= $user ['synopsis'] ;?></td>
+                    
                 </tr>
             </table>
 

@@ -34,6 +34,11 @@ if(isset($_POST['submit'])){
         <p>Synopsis <textarea name="snp" ></textarea></p>
         <p><input type="submit" name="submit"></p>
     </form>
+
+    <hr>
+     
+
+
   
 </body>
 </html>  

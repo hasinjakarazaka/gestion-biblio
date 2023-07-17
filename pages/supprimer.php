@@ -2,7 +2,8 @@
 
 
 
-$db = new PDO('mysql:host=localhost;dbname=biblio;','root','');
+require('../inc/ddb.php');
+
 
 
 if(isset($_GET['CIN']) && !empty($_GET['CIN'])){
