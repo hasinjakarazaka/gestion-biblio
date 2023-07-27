@@ -18,13 +18,22 @@ if (isset($_GET['id_livre']) && !empty($_GET['id_livre'])){
             $snp = $donnee['synopsis'];
 
             if(isset($_POST['modifier'])){
-                $img_modif = file_get_contents($_FILES['image']['tmp_name']);
+               //verifie si l image a ete modofie ou non
+                if (isset($_FILES['image']['error']) && $_FILES['image']['error'] === UPLOAD_ERR_OK) {
+                    $img_modif = file_get_contents($_FILES['image']['tmp_name']);
+                    if ($img_modif) {
+                        // Mettre à jour l'image avec la nouvelle image téléchargée
+                        $img = $img_modif;
+                    }
+                }
+    
+                
                 $titre_modif = htmlspecialchars($_POST['titre']);
                 $auteur_modif = htmlspecialchars($_POST['auteur']);
                 $snp_modif = htmlspecialchars($_POST['snp']);
 
                 $updateLivre = $db->prepare('UPDATE livre SET titre = ?, auteur = ? , synopsis = ? , img = ? WHERE id_livre = ?');
-                $updateLivre->execute(array($titre_modif,$auteur_modif,$snp_modif,$img_modif,$getid));
+                $updateLivre->execute(array($titre_modif,$auteur_modif,$snp_modif,$img,$getid));
 
                 
                 header('Location: afficher-livre.php');

@@ -1,7 +1,4 @@
-
 <?php
-  $db = new PDO ('mysql:host=localhost;dbname=biblio;','root','');
-
 require('../inc/ddb.php');
 session_start();
 
@@ -57,7 +54,7 @@ if(isset($_POST['submit'])){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
-    <title>Document</title>
+    <title>login</title>
 </head>
      <body>
         <div class="container">

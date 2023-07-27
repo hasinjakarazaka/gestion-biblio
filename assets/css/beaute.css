@@ -1,0 +1,31 @@
+table td {
+    border: solid;
+}
+
+
+td {
+padding: 0;
+margin: 0;
+}
+.container {
+display: flex;
+}
+
+#gauche {
+flex: 1;
+box-sizing: border-box;
+padding: 10px;
+}
+
+.tableau {
+flex: 1;
+box-sizing: border-box;
+padding: 10px;
+/* Ajoutez d'autres styles pour la classe "tableau" selon vos besoins */
+}
+.deconnexion {
+    position: absolute;
+    top: 10px; /* Ajustez la valeur selon votre besoin */
+    right: 10px; /* Ajustez la valeur selon votre besoin */
+    /* Ajoutez d'autres styles pour la classe "deconnexion" selon vos besoins */
+}
